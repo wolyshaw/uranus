@@ -256,6 +256,9 @@ const fs = require('fs'),
 			return Promise.resolve('available commands: ' + Object.keys(commands).join(' ') + ' exit\n');
 		}
 	},
+	config = eval(fs.readFileSync(cfg, {
+		encoding: 'utf8'
+	})),
 	manager = tls.createServer({
 		key: fs.readFileSync(path.join(__dirname, ...config.keys.key)),
 		cert: fs.readFileSync(path.join(__dirname, ...config.keys.cert))
@@ -311,9 +314,7 @@ const fs = require('fs'),
 	}).on('error', function (err) {
 		console.error(err.stack);
 	}).on('close', startManager);
-let config = eval(fs.readFileSync(cfg, {
-	encoding: 'utf8'
-}));
+
 process.title = 'fusion manager';
 require('./jsex.js');
 process.on('uncaughtException', function (err) {

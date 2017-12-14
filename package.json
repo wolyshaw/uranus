@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "mime": "^2.0.3",
+    "opentype.js": "^0.7.3",
+    "ws": "^3.3.2"
+  }
+}
