@@ -257,8 +257,8 @@ const fs = require('fs'),
 		}
 	},
 	manager = tls.createServer({
-		key: fs.readFileSync(path.join(__dirname, 'key.pem')),
-		cert: fs.readFileSync(path.join(__dirname, 'cert.pem'))
+		key: fs.readFileSync(path.join(__dirname, ...config.keys.key)),
+		cert: fs.readFileSync(path.join(__dirname, ...config.keys.cert))
 	}, function (socket) {
 		let rl = readline.createInterface({
 				input: socket,
