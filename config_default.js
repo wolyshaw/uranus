@@ -28,6 +28,13 @@
 				key: [''],
 				cert: ['']
 			},
+			mysql: {
+				database: '',
+				user: '',
+				pass: '',
+				host: '',
+				dialect: ''
+			},
 			manager: {
 				port: 4444,
 				password: '123456'

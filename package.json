@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "mime": "^2.0.3",
+    "mysql2": "^1.5.1",
     "opentype.js": "^0.7.3",
+    "sequelize": "^4.28.2",
     "ws": "^3.3.2"
   }
 }

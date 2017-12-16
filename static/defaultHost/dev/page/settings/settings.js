@@ -26,21 +26,13 @@ define(['module', 'common/kernel/kernel', 'site/util/util'], function (module, k
 
 	return {
 		onload: function (force) {
-			util.callapi([
-				{
-					'!api': 'test',
+			util.callapi({
+					'!api': 'createTest',
 					type: 'all',
 					len: 4
-				},
-				{
-					'!api': 'test',
-					type: 'all',
-					len: 4
-				}
-			]).then((data) => {
+				}).then((data) => {
 				console.log(data)
 			})
-			// captcha.dispatchEvent(new MouseEvent('click'));
 		}
 	};
 });

@@ -9,5 +9,5 @@ module.exports = {
 	upload: async function (params, auth) {
 		return Promise.resolve();
 	},
-	test
+	...test
 };
